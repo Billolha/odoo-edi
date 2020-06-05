@@ -21,22 +21,28 @@
 from odoo import models, fields, api, _
 
 import logging
+
 _logger = logging.getLogger(__name__)
 
 
 class account_invoice(models.Model):
-    _inherit = 'account.invoice'
-    
-    credited_period_start = fields.Date(string='Credited Period Start')
-    credited_period_end = fields.Date(string='Credited Period End')
-    credit_reason = fields.Selection(selection=[
-        ('108', 'Finansiell kompensation'),
-        ('140', 'Returer'),
-        ('141', 'Volymrabatt'),
-        ('79E', 'Felleverans'),
-        ('Z01', 'Skadat gods'),
-        ('Z02', 'Felbeställning'),
-        ('Z03', 'Kvalitetsbrist'),
-        ('Z04', 'Fel pris'),
-    ], string='Credit Reason')
+    _inherit = "account.invoice"
+
+    credited_period_start = fields.Date(string="Credited Period Start")
+    credited_period_end = fields.Date(string="Credited Period End")
+    credit_reason = fields.Selection(
+        selection=[
+            ("108", "Finansiell kompensation"),
+            ("140", "Returer"),
+            ("141", "Volymrabatt"),
+            ("79E", "Felleverans"),
+            ("Z01", "Skadat gods"),
+            ("Z02", "Felbeställning"),
+            ("Z03", "Kvalitetsbrist"),
+            ("Z04", "Fel pris"),
+        ],
+        string="Credit Reason",
+    )
+
+
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

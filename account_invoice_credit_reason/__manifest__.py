@@ -20,21 +20,19 @@
 ##############################################################################
 
 {
-    'name': 'Credit Invoice Reason',
-    'version': '0.1',
-    'category': 'edi',
-    'summary': '',
-    'licence': 'AGPL-3',
-    'description': """
+    "name": "Credit Invoice Reason",
+    "version": "0.1",
+    "category": "edi",
+    "summary": "",
+    "licence": "AGPL-3",
+    "description": """
 Adds a credit reason selection to invoice. The reason codes conform to the ESAP20 EDI specification.
 """,
-    'author': 'Vertel AB',
-    'website': 'http://www.vertel.se',
-    'depends': ['account',],
-    'data': [
-        'account.xml',
-    ],
-    'application': False,
-    'installable': True,
+    "author": "Vertel AB",
+    "website": "http://www.vertel.se",
+    "depends": ["account",],
+    "data": ["views/account.xml",],
+    "application": False,
+    "installable": True,
 }
 # vim:expandtab:smartindent:tabstop=4s:softtabstop=4:shiftwidth=4:
